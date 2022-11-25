@@ -1,26 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import logo from './logo.svg'
+import Information from './assets/pages/information/Infromation.tsx'
+import Footer from './assets/components/footer/Footer.tsx'
+import Header from './assets/components/header/Header.tsx'
+import Timetable from './assets/pages/timetable/Timatable.tsx'
+
+
 import './App.scss'
 
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header/>
+
+      <div className="main">
+
+        {/* <Information/> */}
+        <Timetable/>
+
+      </div>
+
+      <Footer/>
+
+
     </div>
   );
 }
