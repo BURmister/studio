@@ -3,7 +3,7 @@ import React from "react";
 import gitHub from '../../img/github-icon.svg'
 import vk from '../../img/vk-icon.svg'
 
-const Footer: React.FC = () => {
+const Footer = () => {
    return (
       <div className='footer'>
       <div className="footer__wrapper">

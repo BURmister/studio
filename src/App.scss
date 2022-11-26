@@ -1,14 +1,18 @@
+$black: rgba(0, 0, 0, 0.8);
+$violet:rgba(136, 123, 220, 0.8);
+$violet-hover:rgba(136, 123, 220, 0.5);
+
 .App {
 
-   color: rgba(0, 0, 0, 0.8);
-   font-size: 15px;
+   color: $black;
+   font-size: 20px;
    font-weight: bold;
    text-transform: uppercase;
 
    a {
-      color: rgba(0, 0, 0, 0.8);
-      font-size: 15px;
-      font-weight: bold;
+      color: $black;
+      font-size: 17px;
+      font-weight: 500;
       text-transform: uppercase;
       text-decoration: none;
    }
@@ -29,14 +33,25 @@
          justify-content: space-between;
 
          &-links {
-            padding-right: 5%;
+            margin-right: 5%;
 
             display: flex;
             align-items: center;
             justify-content: space-around;
 
             .header-link {
-               padding-right:30px;
+               margin-right: 5px;
+               padding-left: 10px;
+               padding-right: 10px;
+               transition: all 0.5s ease-out;
+
+               &:hover {
+                  background-color: $violet-hover;
+               }
+            }
+
+            .current-page {
+               background-color: $violet;
             }
 
          }
@@ -48,6 +63,13 @@
       min-height: 100vh;
 
       background-color: rgb(243,239,238);
+      
+      h3 {
+         color: $violet;
+         font-weight: bold;
+         font-size: 40px;
+         letter-spacing: 5px;
+      }
 
       .information {
          display: flex;
@@ -57,7 +79,9 @@
          font-size: 20px;
 
          &__wrapper {
-            padding-top: 20%;
+            padding-top: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
             width: 1000px;
 
             display: flex;
@@ -66,20 +90,201 @@
             justify-content: space-between;
 
             &-item {
-               padding-bottom: 10%;
+               position: relative;
+               padding-bottom: 5%;
 
                display: flex;
                flex-direction: column;
                align-items: center;
                justify-content: center;
+               gap: 20px;
 
-               text-align: center;
+               text-align: center;  
+
+               img {
+                  position: relative;
+                  height: 475px;
+                  width: 900px;
+
+                  filter: blur(2px);
+                  opacity: 0.9;
+                  object-fit: cover;
+                  object-position: bottom;
+
+                  border-radius: 50px;
+               }
+
+
+               > h2 {
+                  position: absolute;
+                  top: 285px;
+
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 20px;
+               }
+
+               .button-welcome {
+                  background-color: white;
+                  color: $violet;
+
+                  &:hover {
+                     color: white;
+                  }
+               }
+            }
+         }
+
+         &-button {
+            width: 200px;
+            height: 50px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+            background: $violet;
+            border: none;
+            border-radius: 25px;
+         
+            font-size: 17px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            transition: all 0.5s ease-out;
+      
+            &:hover {
+               letter-spacing: 3px;
+               background: $violet-hover;
+            }
+         }
+
+         &__about {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            gap: 60px;
+
+
+            &-item {
+               position: relative;
+               height: 100vh;
+               width: 100%;
+
+               display: flex;
+
+               &:nth-child(2) {
+                  justify-content: flex-end;
+
+                  div {
+                     position: absolute;
+                     left: 0%;
+   
+                     max-width: 600px;
+                  }
+               }
+
+               &:nth-child(3) {
+                  justify-content: center;
+
+                  img {
+                     height:  375px;
+                     width: 100%;
+                  }
+
+                  div {
+                     position: absolute;
+                     left: 0%;
+   
+                     max-width: none;
+                     text-align: center;
+                  }
+               }
+
+               &:nth-child(5) {
+                  justify-content: flex-end;
+
+                  div {
+                     position: absolute;
+                     left: 0%;
+   
+                     max-width: 600px;
+                  }
+               }
+
+               img {
+                  position: relative;
+                  padding-top: 25px;
+                  height: 375px;
+                  width: 600px;
+
+                  filter: blur(2px);
+                  opacity: 0.5;
+                  object-fit: cover;
+                  object-position: bottom;
+
+                  border-radius: 50px;
+               }
+
+               div {
+                  position: absolute;
+                  top: 40%;
+                  left: 50%;
+
+                  max-width: 600px;
+
+                  span {
+                     color: $violet;
+                  }
+               }
+
+               > .information-button {
+                  position: absolute;
+                  top: 88%;
+                  left: calc(50% - 100px);
+               }
+
+               .button-to-courses {
+                  width: 250px;
+                  left: calc(50% - 125px);
+
+                  &:hover {
+                     background-color: white;
+                     color: $violet;
+                  }
+               }
             }
          }
       }
 
       .timetable {
          display: flex;
+         align-items: center;
+         justify-content: center;
+
+         &__wrapper {
+            width: 1000px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+         }
+
+         &__courses {
+            padding-top: 60px;
+         }
+
+      }
+
+      .courses {
+         display: flex;
+         flex-direction: column;
          align-items: center;
          justify-content: center;
 
@@ -91,34 +296,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-
-            .timetable__calendar {
-               display: flex;
-               align-items: center;
-               justify-content: space-between;
-
-               
-
-               div {
-                  margin-right: 10px;
-                  height: 100px;
-                  width: 80px;
-
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: space-around;
-
-                  background-color: #fff;
-                  border-radius: 7px;
-
-                  span {
-                     font-size: 22px;
-                  }
-               }
-            }
          }
+      }
 
+      .achievements {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+
+         &__wrapper {
+            padding-top: 5%;
+            width: 1000px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+         }
       }
    }
 
