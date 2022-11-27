@@ -1,5 +1,7 @@
 import React from "react";
+import CourseCard from "../../components/courseCard/CourseCard";
 
+import logo from '../../img/logo.png'
 
 const Courses = ({setCurrentPage}) => {
 
@@ -14,7 +16,16 @@ const Courses = ({setCurrentPage}) => {
          <h3>наши курсы</h3>
 
          <div className="courses__wrapper">
-         courses
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
+            <CourseCard/>
          </div>
 
       </div>

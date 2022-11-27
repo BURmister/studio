@@ -1,8 +1,9 @@
 import React from "react";
-import Calendar from "../../components/calendar/Calendar";
-
 import { format, parseISO } from "date-fns"
 import ruLocale from 'date-fns/locale/ru'
+
+import Calendar from "../../components/calendar/Calendar";
+import TimetableCard from "../../components/timetableCard/TimetableCard";
 
 
 const Timetable = ({setCurrentPage}) => {
@@ -49,9 +50,15 @@ const Timetable = ({setCurrentPage}) => {
                      .filter((object) => object.date.toLowerCase().includes(format(selectedDate, "LLLL d", {locale: ruLocale}).toString().toLowerCase()))
                      .map(object => (
                      <div>
-                        название: {object.name}<br/>
-                        {object.date}<br/>
-                        {object.price}<br/>
+
+                        <TimetableCard
+                           name={object.name}
+                           image={object.image}
+                           date={object.date}
+                           time={object.time}
+                           price={object.price}
+                           curator={object.curator}
+                        />
 
                      </div>
                   ))

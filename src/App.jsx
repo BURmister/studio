@@ -5,7 +5,7 @@ import Information from './assets/pages/information/Infromation'
 import Footer from './assets/components/footer/Footer'
 import Header from './assets/components/header/Header'
 import Timetable from './assets/pages/timetable/Timatable'
-import Achievements from './assets/pages/achievements/Achievements'
+import News from './assets/pages/news/News'
 import Courses from './assets/pages/courses/Courses'  
 
 import './App.scss'
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/" element={<Information setCurrentPage={(value) => setCurrentPage(value)}/>}/>
           <Route path="/timetable" element={<Timetable setCurrentPage={(value) => setCurrentPage(value)}/>}/>
           <Route path="/courses" element={<Courses setCurrentPage={(value) => setCurrentPage(value)}/>}/>
-          <Route path="/achievements" element={<Achievements setCurrentPage={(value) => setCurrentPage(value)}/>}/>
+          <Route path="/news" element={<News setCurrentPage={(value) => setCurrentPage(value)}/>}/>
         </Routes>
 
       </div>

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Link as LinkToText, animateScroll as scroll } from "react-scroll";
 
 import purpleMain from '../../img/purple-main.jpg'
-import arrowDown from '../../img/arrow-down.svg'
 
 const Information = ({setCurrentPage}) => {
 
@@ -18,6 +17,7 @@ const Information = ({setCurrentPage}) => {
 
          <div className="information__wrapper-item">
             <img src={purpleMain}/>
+            <h1>WEB-Molekule</h1>
             <h2>
                привет! <br/>
                давай посмотрим расписание на сегодня
@@ -37,7 +37,7 @@ const Information = ({setCurrentPage}) => {
                <img id="about1" src={purpleMain}/>
                <div>
                   <h2>кто мы?</h2>
-                  <span>мы</span> - <span>крутая</span> учебная организация, предоставляющая <span>амбициозные</span> и <span>полезные</span> курсы
+                  <span>мы</span> - <span>web-molekule</span> - <span>крутая</span> учебная организация, предоставляющая <span>амбициозные</span> и <span>полезные</span> курсы
                </div>   
                <LinkToText to="about2" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>

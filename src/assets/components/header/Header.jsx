@@ -8,7 +8,7 @@ const Header = ({currentPage}) => {
   const links = [
     {name: 'timetable', path: '/timetable', value: 'расписание'},
     {name: 'courses', path: '/courses', value: 'наши курсы'},
-    {name: 'achievements', path: '/achievements', value: 'достижения'}
+    {name: 'news', path: '/news', value: 'новости'}
   ]
 
   return (
@@ -16,15 +16,18 @@ const Header = ({currentPage}) => {
 
       <div className="header__wrapper">
 
-        <div className="header__wrapper-logo">
-          <Link to="/"><img src={logo} width="180px"/></Link>
-        </div>
+        <Link to="/" className="header__wrapper-logo">
+          <img src={logo} width="180px"/>
+          WEB-Molekule
+        </Link>
 
         <div className='header__wrapper-links'>
           {
             links.map(object => (
-              <Link key={object.name} to={object.path} className={currentPage === object.name ? 'current-page header-link' : 'header-link' }>
-                {object.value}
+              <Link key={object.name} to={object.path} className={currentPage === object.name ? 'current-page header-link' : ' header-link' }>
+                <div>
+                  {object.value}
+                </div>
               </Link>
             ))
           }
