@@ -24,8 +24,6 @@ const Timetable = ({setCurrentPage}) => {
       setCurrentPage('timetable')
    }, [])
 
-   console.log(selectedDate)
-
    const onDateClickHandle = (day) => {
       setSelectedDate(day)
    }

@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 import './CourseCard.scss'
 import logo from '../../img/logo.png'
 
-const CourseCard = () => {
+const CourseCard = ({ name, img, description, lasting, price }) => {
 
    return (
       <div className="card">
-         <div className="card__name"><h4>Веб-разработчик на Python</h4><img src={logo} width="200px"/></div>
+         <div className="card__name"><h4>{name}</h4><img src={img} width="200px"/></div>
          <div className="card__description">
-            <div>Этот курс подходит для новичков, на нем вы научитесь разрабатывать веб-приложения на Python</div>
-            <span>Длительность 72 часа</span>
+            <div>{description}</div>
+            <span>Длительность {lasting}</span>
             <div className="card__price">
-               5999 ₽
+               {price} ₽
                <Link to="/" className="card__price-button">Подробнее</Link>
             </div> 
          </div> 

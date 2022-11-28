@@ -1,4 +1,5 @@
 import React from "react";
+import NewsCard from "../../components/newsCard/NewsCard";
 
 
 const News = ({setCurrentPage}) => {
@@ -14,7 +15,12 @@ const News = ({setCurrentPage}) => {
       <h3>новости</h3>
 
          <div className="news__wrapper">
-         news
+         
+            <NewsCard/>
+            <NewsCard/>
+            <NewsCard/>
+            <NewsCard/>
+            
          </div>
 
       </div>

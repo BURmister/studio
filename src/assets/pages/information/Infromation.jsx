@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Link as LinkToText, animateScroll as scroll } from "react-scroll";
 
-import purpleMain from '../../img/purple-main.jpg'
+import informationMain from '../../img/information-main.jpg'
+
+import information2 from '../../img/information2.jpg'
+import information3 from '../../img/information3.png'
 
 const Information = ({setCurrentPage}) => {
 
@@ -16,7 +19,7 @@ const Information = ({setCurrentPage}) => {
          <div className="information__wrapper">
 
          <div className="information__wrapper-item">
-            <img src={purpleMain}/>
+            <img src={informationMain}/>
             <h1>WEB-Molekule</h1>
             <h2>
                привет! <br/>
@@ -34,7 +37,7 @@ const Information = ({setCurrentPage}) => {
          <div className="information__about">
 
             <div className="information__about-item">
-               <img id="about1" src={purpleMain}/>
+               <img id="about1" src={information2}/>
                <div>
                   <h2>кто мы?</h2>
                   <span>мы</span> - <span>web-molekule</span> - <span>крутая</span> учебная организация, предоставляющая <span>амбициозные</span> и <span>полезные</span> курсы
@@ -42,7 +45,7 @@ const Information = ({setCurrentPage}) => {
                <LinkToText to="about2" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about2" src={purpleMain}/>
+               <img id="about2" src={information3}/>
                <div>
                   <h2>почему наши курсы?</h2>
                   <span>наши</span> курсы <span>дешевле</span>, чем на других популярных платформах, 
@@ -52,7 +55,7 @@ const Information = ({setCurrentPage}) => {
                <LinkToText to="about3" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about3" src={purpleMain}/>
+               <img id="about3" src={informationMain}/>
                <div>
                   <h2>почему так?</h2>
                   у <span>нас</span> нет рекламы в каждой социальной сети, наши <span>сотрудники</span> - только <span>ваши кураторы</span> и их менеджер,
@@ -61,7 +64,7 @@ const Information = ({setCurrentPage}) => {
                <LinkToText to="about4" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about4" src={purpleMain}/>
+               <img id="about4" src={informationMain}/>
                <div>
                   <h2>кураторы?</h2>
                   <span>да</span> - на каждом курсе свой <span>куратор</span>, он - <span>специалист</span> в своей области,
@@ -70,7 +73,7 @@ const Information = ({setCurrentPage}) => {
                <LinkToText to="about5" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about5" src={purpleMain}/>
+               <img id="about5" src={informationMain}/>
                <div>
                   <h2>что в конце?</h2>
                   в <span>конце</span> вы получите <span>диплом</span> государственного стандарта, <span>поработаете</span> на нашем 
