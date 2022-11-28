@@ -2,9 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom";
 
 import './CourseCard.scss'
-import logo from '../../img/logo.png'
 
-const CourseCard = ({ name, img, description, lasting, price }) => {
+const CourseCard = ({ id, name, img, description, lasting, price }) => {
 
    return (
       <div className="card">
@@ -14,7 +13,7 @@ const CourseCard = ({ name, img, description, lasting, price }) => {
             <span>Длительность {lasting}</span>
             <div className="card__price">
                {price} ₽
-               <Link to="/" className="card__price-button">Подробнее</Link>
+               <Link to={`/courses/${id}`} className="card__price-button">Подробнее</Link>
             </div> 
          </div> 
       </div>

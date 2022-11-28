@@ -7,6 +7,7 @@ import Header from './assets/components/header/Header'
 import Timetable from './assets/pages/timetable/Timatable'
 import News from './assets/pages/news/News'
 import Courses from './assets/pages/courses/Courses'  
+import CoursePage from './assets/pages/coursePage/CoursePage'
 
 import './App.scss'
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/" element={<Information setCurrentPage={(value) => setCurrentPage(value)}/>}/>
           <Route path="/timetable" element={<Timetable setCurrentPage={(value) => setCurrentPage(value)}/>}/>
           <Route path="/courses" element={<Courses setCurrentPage={(value) => setCurrentPage(value)}/>}/>
+          <Route path="/courses/:id" element={<CoursePage setCurrentPage={(value) => setCurrentPage(value)}/>}/>
           <Route path="/news" element={<News setCurrentPage={(value) => setCurrentPage(value)}/>}/>
         </Routes>
 

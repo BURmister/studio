@@ -10,13 +10,13 @@ const Timetable = ({setCurrentPage}) => {
 
    const [selectedDate, setSelectedDate] = React.useState(new Date())
    const [dayCourses, setDayCourses] = React.useState([
-      {name: 'название js', date: 'Ноябрь 27', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название php', date: 'Ноябрь 26', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название ts', date: 'Ноябрь 25', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название react', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название vue', date: 'Ноябрь 24', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название next', date: 'Декабрь 1', time: '10:00', price: '+100500', curator: 'хз'},
-      {name: 'название native', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '1',name: 'название js', date: 'Ноябрь 27', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '2',name: 'название php', date: 'Ноябрь 26', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '3',name: 'название ts', date: 'Ноябрь 25', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '4',name: 'название react', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '5',name: 'название vue', date: 'Ноябрь 24', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '6',name: 'название next', date: 'Декабрь 1', time: '10:00', price: '+100500', curator: 'хз'},
+      {id: '7',name: 'название native', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
    ])
 
    React.useEffect(() => {
@@ -46,10 +46,11 @@ const Timetable = ({setCurrentPage}) => {
                {
                   dayCourses
                      .filter((object) => object.date.toLowerCase().includes(format(selectedDate, "LLLL d", {locale: ruLocale}).toString().toLowerCase()))
-                     .map(object => (
-                     <div>
+                     .map((object, index) => (
+                     <div key={index}>
 
                         <TimetableCard
+                           id={object.id}
                            name={object.name}
                            image={object.image}
                            date={object.date}

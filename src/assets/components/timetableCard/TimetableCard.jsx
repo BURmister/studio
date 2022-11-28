@@ -1,10 +1,11 @@
 import React from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import './TimetableCard.scss'
 import logo from '../../img/logo.png'
 
-const TimetableCard = ({ name, date, time, price, image, curator }) => {
+
+const TimetableCard = ({ id, name, date, time, price, image, curator }) => {
 
    return (
       <div className="tcard">
@@ -14,7 +15,7 @@ const TimetableCard = ({ name, date, time, price, image, curator }) => {
             <span>{curator}</span>
             <div className="tcard__price">
                {price}
-               <Link to="/" className="tcard__price-button">Подробнее</Link>
+               <Link to={`/courses/${id}`} className="tcard__price-button">Подробнее</Link>
             </div> 
          </div> 
       </div>

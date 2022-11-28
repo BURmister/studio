@@ -15,7 +15,7 @@ const News = ({setCurrentPage}) => {
       <h3>новости</h3>
 
          <div className="news__wrapper">
-         
+            
             <NewsCard/>
             <NewsCard/>
             <NewsCard/>
