@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import axios from 'axios'
 
 import Information from './assets/pages/information/Infromation'
 import Footer from './assets/components/footer/Footer'
@@ -15,6 +16,10 @@ import './App.scss'
 const App = () => {
 
   const [currentPage, setCurrentPage] = React.useState('main')
+
+  React.useEffect(() => {
+
+  }, [])
 
   return (
     <div className="App">

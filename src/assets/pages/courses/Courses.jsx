@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 import CourseCard from "../../components/courseCard/CourseCard";
 
 import logo from '../../img/logo.png'
@@ -19,21 +21,31 @@ import course12 from '../../img/course12.png'
 const Courses = ({setCurrentPage}) => {
 
    const [coursesList, setCoursesList] = React.useState([
-      {id: '1', name: 'название js', img: course1, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '2', name: 'название php', img: course2, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '3', name: 'название ts', img: course3, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '4', name: 'название react', img: course4, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '5', name: 'название native', img: course7, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' ,  price: '+100500'},
-      {id: '6', name: 'название js', img: course8, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '7', name: 'название php', img: course9, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
-      {id: '8', name: 'название ts', img: course10, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
-      {id: '9', name: 'название ts', img: course11, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
-      {id: '10', name: 'название ts', img: course12, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
+      // {id: '1', name: 'название js', img: course1, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '2', name: 'название php', img: course2, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '3', name: 'название ts', img: course3, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '4', name: 'название react', img: course4, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '5', name: 'название native', img: course7, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' ,  price: '+100500'},
+      // {id: '6', name: 'название js', img: course8, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '7', name: 'название php', img: course9, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},
+      // {id: '8', name: 'название ts', img: course10, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
+      // {id: '9', name: 'название ts', img: course11, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
+      // {id: '10', name: 'название ts', img: course12, description: 'хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного', lasting: '72 часа' , price: '+100500'},   
    ])
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
       setCurrentPage('courses')
+
+      const fetchData = async () => {
+         try {
+          const { data } = await axios.get('http://localhost:4200/api/courses')
+          setCoursesList(data)
+        } catch(error) {
+          console.log(error)
+        }
+      }
+      fetchData()
    }, [])
 
    return (
@@ -46,13 +58,13 @@ const Courses = ({setCurrentPage}) => {
             {
                coursesList.map(object => (
                   <CourseCard 
-                     key={object.id}
-                     id={object.id}
-                     name={object.name}
-                     img={object.img}
-                     description={object.description}
-                     lasting={object.lasting}
+                     // key={object.id}
+                     // id={object.id}
+                     // img={object.img}
+                     // description={object.description}
+                     // lasting={object.lasting}
                      price={object.price}
+                     name={object.title}
                   />
                ))
             }
