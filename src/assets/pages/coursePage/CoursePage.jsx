@@ -1,6 +1,8 @@
 import React from "react"
 import { useParams, useNavigate } from 'react-router-dom'
 
+import './CoursePage.scss'
+
 const CoursePage = ({setCurrentPage}) => {
 
    const { id } = useParams()
@@ -53,9 +55,43 @@ const CoursePage = ({setCurrentPage}) => {
 
          <div className="coursePage__wrapper">
 
+            <div className="wrapper__item">
             <h3>{product.name}</h3>
+               <div className="img"></div>
+               <div className="description">
+                  <h4>О чем этот курс?</h4>
+                  Описание курса описание курса описание курса Опание куркурса описание курсаОписание курса описание курса описание курсаОписание курса описание курса описание курсаОписание курса описание курса описание курсаОписание курса описание курса описание курсаОписание курса описание курса описание курса
+               </div>    
+               <div className="list">
+                  <h4>Для кого этот курс подходит?</h4>
+                  Новички в программировании
+                  Люди которым хотелось бы ознакомиться с айти сферой<br/>
+                  Люди которые хотят восполнить недостающие знания о данной сфере
+               </div>
+            </div>
 
-            CoursePage {id}
+            <div className="wrapper__item">
+               <div className="description">
+                  <h4>Кто ведет этот курс?</h4>
+               </div>
+               <div className="curator">
+                  <div className="img"></div>
+                  Сафронов Дмитрий Алексеевич
+                  Преподаватель ПЭК ГГТУ, имеет такие то заслуги и такой то титул а также имеет 6 высших образований и так далее так далее
+               </div>
+            </div>
+
+            <div className="wrapper__item">
+               <div className="img">72 академических часа</div>
+               <div className="description">
+                  <h4>Сколько длится?</h4>
+               </div>
+            </div>
+
+            <div className="wrapper__item">
+               <div className="description"><h4>По окончанию обучения, вы получите сертификат</h4></div>
+               <div className="img"></div>
+            </div>
             
          </div>
 

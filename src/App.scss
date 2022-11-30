@@ -148,7 +148,6 @@ $violet-hover:rgba(136, 123, 220, 0.5);
                   height: 475px;
                   width: 900px;
 
-                  filter: blur(2px);
                   opacity: 0.8;
                   object-fit: cover;
                   object-position: bottom;
@@ -158,7 +157,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
 
                > h1 {
                   position: absolute;
-                  top: 30px;
+                  top: 0;
                   font-weight: normal;
                   font-size: 50px;
                   letter-spacing: 5px;
@@ -168,7 +167,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
 
                > h2 {
                   position: absolute;
-                  top: 285px;
+                  top: 325px;
 
                   display: flex;
                   flex-direction: column;
@@ -276,7 +275,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
 
                   opacity: 0.8;
                   object-fit: cover;
-                  object-position: bottom;
+                  object-position: center;
 
                   border-radius: 50px;
                }

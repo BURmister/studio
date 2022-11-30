@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Link as LinkToText, animateScroll as scroll } from "react-scroll";
 
-import informationMain from '../../img/information-main.jpg'
-
-import information2 from '../../img/information2.jpg'
+import informationMain from '../../img/information-main.png'
+import information2 from '../../img/information2.png'
 import information3 from '../../img/information3.png'
+import information4 from '../../img/information4.png'
+import information5 from '../../img/information5.png'
 
 const Information = ({setCurrentPage}) => {
 
@@ -22,8 +23,7 @@ const Information = ({setCurrentPage}) => {
             <img src={informationMain}/>
             <h1>WEB-Molekule</h1>
             <h2>
-               привет! <br/>
-               давай посмотрим расписание на сегодня
+               давай посмотрим расписание на сегодня!
                <Link to="/timetable" className="information-button button-welcome">посмотреть</Link>
             </h2>
          </div>
@@ -55,25 +55,16 @@ const Information = ({setCurrentPage}) => {
                <LinkToText to="about3" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about3" src={informationMain}/>
-               <div>
-                  <h2>почему так?</h2>
-                  у <span>нас</span> нет рекламы в каждой социальной сети, наши <span>сотрудники</span> - только <span>ваши кураторы</span> и их менеджер,
-                  мы <span>не покупаем отзывы</span>, не платим звездам за рекламу и не льем воду
-               </div>
-               <LinkToText to="about4" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
-            </div>
-            <div className="information__about-item">
-               <img id="about4" src={informationMain}/>
+               <img id="about3" src={information4}/>
                <div>
                   <h2>кураторы?</h2>
                   <span>да</span> - на каждом курсе свой <span>куратор</span>, он - <span>специалист</span> в своей области,
                   и именно он составляет <span>лекции</span> к своему курсу
                </div>
-               <LinkToText to="about5" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
+               <LinkToText to="about4" spy={true} smooth={true} offset={-10} duration={500} className="information-button">далее</LinkToText>
             </div>
             <div className="information__about-item">
-               <img id="about5" src={informationMain}/>
+               <img id="about4" src={information5}/>
                <div>
                   <h2>что в конце?</h2>
                   в <span>конце</span> вы получите <span>диплом</span> государственного стандарта, <span>поработаете</span> на нашем 
