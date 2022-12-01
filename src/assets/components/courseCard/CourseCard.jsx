@@ -13,11 +13,11 @@ const CourseCard = ({ id, name, img, description, lasting, price }) => {
          <div className="card__description">
             <div>{description}</div>
             <span>Длительность {lasting}</span>
-            <div className="card__price">
+         </div> 
+         <div className="card__price">
                {price} ₽
                <Link to={`/courses/${id}`} className="card__price-button">Подробнее</Link>
             </div> 
-         </div> 
       </div>
    )
 }

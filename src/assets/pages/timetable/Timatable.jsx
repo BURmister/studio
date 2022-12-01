@@ -1,6 +1,7 @@
 import React from "react";
 import { format, parseISO } from "date-fns"
 import ruLocale from 'date-fns/locale/ru'
+import axios from 'axios'
 
 import Calendar from "../../components/calendar/Calendar";
 import TimetableCard from "../../components/timetableCard/TimetableCard";
@@ -22,7 +23,18 @@ const Timetable = ({setCurrentPage}) => {
    React.useEffect(() => {
       window.scrollTo(0, 0)
       setCurrentPage('timetable')
-   }, [])
+
+      // const fetchData = async () => {
+      //    try {
+      //       const { data } = await axios.get(`http://localhost:4200/api/timetable/${format(selectedDate, "LLLL d", {locale: ruLocale}).toString().toLowerCase()}`)
+      //       setDayCourses(data)
+      //    } catch(error) {
+      //       console.log(error)
+      //       alert('не удалось получить курсы')
+      //    }
+      // }
+      // fetchData()
+   }, [selectedDate])
 
    const onDateClickHandle = (day) => {
       setSelectedDate(day)
