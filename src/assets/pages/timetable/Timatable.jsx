@@ -10,35 +10,29 @@ import TimetableCard from "../../components/timetableCard/TimetableCard";
 const Timetable = ({setCurrentPage}) => {
 
    const [selectedDate, setSelectedDate] = React.useState(new Date())
-   const [dayCourses, setDayCourses] = React.useState([
-      {id: '1',name: 'название js', date: 'Ноябрь 27', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '2',name: 'название php', date: 'Ноябрь 26', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '3',name: 'название ts', date: 'Ноябрь 25', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '4',name: 'название react', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '5',name: 'название vue', date: 'Ноябрь 24', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '6',name: 'название next', date: 'Декабрь 1', time: '10:00', price: '+100500', curator: 'хз'},
-      {id: '7',name: 'название native', date: 'Ноябрь 28', time: '10:00', price: '+100500', curator: 'хз'},
-   ])
+   const [dayCourses, setDayCourses] = React.useState()
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
       setCurrentPage('timetable')
 
-      // const fetchData = async () => {
-      //    try {
-      //       const { data } = await axios.get(`http://localhost:4200/api/timetable/${format(selectedDate, "LLLL d", {locale: ruLocale}).toString().toLowerCase()}`)
-      //       setDayCourses(data)
-      //    } catch(error) {
-      //       console.log(error)
-      //       alert('не удалось получить курсы')
-      //    }
-      // }
-      // fetchData()
+      const fetchData = async () => {
+         try {
+            const { data } = await axios.get(`http://localhost:4200/api/timetable/${format(selectedDate, "LLLL_d").toString().toLowerCase()}`)
+            setDayCourses(data.courses)
+            console.log(data.courses)
+         } catch(error) {
+            console.log(error)
+            alert('не удалось получить курсы')
+         }
+      }
+      fetchData()
    }, [selectedDate])
 
    const onDateClickHandle = (day) => {
       setSelectedDate(day)
    }
+
 
    return (
       <div className="timetable"> 
@@ -55,20 +49,14 @@ const Timetable = ({setCurrentPage}) => {
 
             <div className="timetable__courses">
                
-               {
+               {dayCourses &&
                   dayCourses
-                     .filter((object) => object.date.toLowerCase().includes(format(selectedDate, "LLLL d", {locale: ruLocale}).toString().toLowerCase()))
                      .map((object, index) => (
                      <div key={index}>
 
                         <TimetableCard
-                           id={object.id}
-                           name={object.name}
-                           image={object.image}
-                           date={object.date}
+                           id={object.course_id}
                            time={object.time}
-                           price={object.price}
-                           curator={object.curator}
                         />
 
                      </div>

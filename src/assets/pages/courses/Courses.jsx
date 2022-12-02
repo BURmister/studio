@@ -20,18 +20,21 @@ import course12 from '../../img/course12.png'
 
 const Courses = ({setCurrentPage}) => {
 
-   const [coursesList, setCoursesList] = React.useState([
-      // {"_id": "data-analyst", name: "аналитик данных", img: course8, description: "Научитесь анализировать данные с помощью сервисов аналитики и BI-инструментов, освоите Python и SQL. Станете незаменимым специалистом — и сможете помогать бизнесу принимать решения на основе данных", lasting: "72 часа" , price: "6000", curator: "Иванов Иван Иванович"},
-      // {"_id": "frontend-developer", name: "Frontend-разработчик", img: course2, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствияо-то осмусленного", lasting: "72 часа" , price: "7000", curator: "Иванов Иван Иванович"},
-      // {"_id": "it-managment", name: "IT-managment", img: course3, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "10500", curator: "Иванов Иван Иванович"},
-      // {"_id": "ui-ux-development", name: "разработка интерфейсов", img: course4, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "9000", curator: "Иванов Иван Иванович"},
-      // {"_id": "unity-developer", name: "Unity-разработчик", img: course7, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" ,  price: "4500", curator: "Иванов Иван Иванович"},
-      // {"_id": "business-logic", name: "бизнес логика", img: course1, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "20000", curator: "Иванов Иван Иванович"},
-      // {"_id": "system-analytics", name: "системная аналитика", img: course9, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "6700", curator: "Иванов Иван Иванович"},
-      // {"_id": "ux-development", name: "UX-разработка", img: course10, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "8900", curator: "Иванов Иван Иванович"},   
-      // {"_id": "java-developer", name: "java-разработчик", img: course11, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "10500", curator: "Иванов Иван Иванович"},   
-      // {"_id": "python-developer", name: "разработка на python", img: course12, description: "хз, что написать, поэтому просто оставлю этот текст здесь для иллюзии присутствия чего-то осмусленного", lasting: "72 часа" , price: "7500", curator: "Иванов Иван Иванович"},   
-   ])
+   const [coursesList, setCoursesList] = React.useState([])
+   // const images = [
+   //    {name: "course1", value: course1},
+   //    {name: "course2", value: course2},
+   //    {name: "course3", value: course3},
+   //    {name: "course4", value: course4},
+   //    {name: "course5", value: course5},
+   //    {name: "course6", value: course6},
+   //    {name: "course7", value: course7},
+   //    {name: "course8", value: course8},
+   //    {name: "course9", value: course9},
+   //    {name: "course10", value: course9},
+   //    {name: "course", value: course9},
+   //    {name: "course9", value: course9},
+   // ]
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
