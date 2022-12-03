@@ -1,6 +1,6 @@
 .ncard {
    position: relative;
-   height: 600px;
+   height: 450px;
 
    display: flex;
    flex-direction: column;
@@ -29,18 +29,15 @@
       height: 250px;
       border-radius: 15px;
    } 
-
-   // &__img{
-   //    height: 100%;
-   //    object-fit: cover;
-   //    object-position: center ;
-   //    border-radius: 31px;
-   // }
    
    &__text{
       position: absolute;
-      padding-left: 3%;
       padding-bottom: 3%;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       border-radius: 30px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -52,6 +49,7 @@
          border-radius: 20px;
          
          h4 {
+            padding-left: 5%;
             font-size: 19px;
             font-weight: normal;
          }
