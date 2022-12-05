@@ -21,16 +21,15 @@ const Information = ({setCurrentPage}) => {
 
          <div className="information__wrapper-item">
             <img src={informationMain}/>
-            <h1>WEB-Molekule</h1>
             <h2>
                давай посмотрим расписание на сегодня!
                <Link to="/timetable" className="information-button button-welcome">посмотреть</Link>
             </h2>
-         </div>
 
-         <div className="information__wrapper-item">
-            еще не знаком с нашимими курсами? <br/>
-            <LinkToText to="about1" spy={true} smooth={true} offset={-10} duration={500} className="information-button">ознакомиться</LinkToText>
+            <div className="text-link">
+               еще не знаком с нашимими курсами? <br/>
+               <LinkToText to="about1" spy={true} smooth={true} offset={-10} duration={500} className="information-button">ознакомиться</LinkToText>
+            </div>
          </div>
 
          <div className="information__about">

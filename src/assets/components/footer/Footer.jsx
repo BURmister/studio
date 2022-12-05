@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="footer__wrapper">
 
         <div className="footer__wrapper-link">
-          <a className="icon-github icon" href="#"><img src={gitHub}  ></img></a>
-          <a className="icon-vk icon" href="#"><img src={vk} ></img></a>
-          <a className="icon-telegram icon" href="#"><img src={telegram} ></img></a>
+          <a className="icon-github icon" href="https://github.com/BURmister/studio"><img src={gitHub} alt="github"></img></a>
+          <a className="icon-vk icon" href="https://github.com/BURmister/studio"><img src={vk} alt="vk"></img></a>
+          <a className="icon-telegram icon" href="https://github.com/BURmister/studio"><img src={telegram} alt="telegram"></img></a>
         </div>
 
         <div className="footer__wrapper-copyright">

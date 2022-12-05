@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ContentLoader from 'react-content-loader'
+import { useNavigate } from "react-router";
 
 import CourseCard from "../../components/courseCard/CourseCard";
 
@@ -8,6 +9,8 @@ const Courses = ({setCurrentPage}) => {
 
    const [coursesList, setCoursesList] = React.useState([])
    const [loading, setLoading] = React.useState(true)
+
+   const navigate = useNavigate()
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
@@ -20,6 +23,8 @@ const Courses = ({setCurrentPage}) => {
             setCoursesList(data)
          } catch(error) {
             console.log(error)
+            alert('не удалось получить данные о курсах, попробуйте позже')
+            navigate('/')
          } finally {
             setLoading(false)
          }  

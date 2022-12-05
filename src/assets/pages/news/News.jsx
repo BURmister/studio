@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ContentLoader from 'react-content-loader'
+import { useNavigate } from "react-router";
 
 import NewsCard from "../../components/newsCard/NewsCard";
 
@@ -9,6 +10,8 @@ const News = ({setCurrentPage}) => {
 
    const [news, setNews] = React.useState()
    const [loading, setLoading] = React.useState(true)
+
+   const navigate = useNavigate()
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
@@ -23,6 +26,7 @@ const News = ({setCurrentPage}) => {
          catch(error) {
             console.log(error)
             alert('не удалось получить новости')
+            navigate('/')
          } finally {
             setLoading(false)
          }

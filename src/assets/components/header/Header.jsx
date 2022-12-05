@@ -17,7 +17,7 @@ const Header = ({currentPage}) => {
       <div className="header__wrapper">
 
         <Link to="/" className="header__wrapper-logo">
-          <img src={logo} width="180px"/>
+          <img src={logo} width="180px" alt="logo"/>
           WEB-Molekule
         </Link>
 
@@ -25,9 +25,7 @@ const Header = ({currentPage}) => {
           {
             links.map(object => (
               <Link key={object.name} to={object.path} className={currentPage === object.name ? 'current-page header-link' : ' header-link' }>
-                <div>
-                  {object.value}
-                </div>
+                {object.value}
               </Link>
             ))
           }

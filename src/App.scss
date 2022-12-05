@@ -51,7 +51,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
             align-items: center;
             justify-content: space-between;
 
-            font-weight: normal;
+            font-weight: normal; 
             font-size: 17px;
             color: $violet
          }
@@ -64,27 +64,23 @@ $violet-hover:rgba(136, 123, 220, 0.5);
             justify-content: space-around;
 
             .header-link {
-               margin-right: 5px;
-               padding: 30px 0 30px 0;
+               margin-right: 15px;
+               padding: 15px 10px 15px 10px;
                transition: all 0.5s ease-out;
+               border-radius: 12px;
 
-               &:hover div {
+               &:hover {
+                  border-radius: 20px;
                   background-color: $violet-hover;
-               }
-               
-               div {
-                  padding: 0 10px 0 10px;
-
-                  transition: all 0.5s ease-out;
                }
             }
 
             .current-page {
-               &:hover div {
-                  background-color: $violet;
-               }
+               border-radius: 12px;
+               background-color: $violet;
 
-               div {
+               &:hover {
+                  border-radius: 12px;
                   background-color: $violet;
                }
             }
@@ -123,7 +119,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
             }
 
             @media screen and (max-width: 850px) {
-               max-width: 500px;
+               max-width: 650px;
             }
 
             display: flex;
@@ -133,13 +129,13 @@ $violet-hover:rgba(136, 123, 220, 0.5);
 
             &-item {
                position: relative;
-               padding-bottom: 5%;
+               height: calc(100vh);
 
                display: flex;
                flex-direction: column;
                align-items: center;
-               justify-content: center;
-               gap: 20px;
+               justify-content: flex-start;
+               gap: 35px;
 
                text-align: center;  
 
@@ -155,17 +151,7 @@ $violet-hover:rgba(136, 123, 220, 0.5);
                   border-radius: 50px;
                }
 
-               > h1 {
-                  position: absolute;
-                  top: 0;
-                  font-weight: normal;
-                  font-size: 50px;
-                  letter-spacing: 5px;
-                  color: white;
-               }
-
-
-               > h2 {
+               h2 {
                   position: absolute;
                   top: 325px;
 
@@ -174,6 +160,8 @@ $violet-hover:rgba(136, 123, 220, 0.5);
                   align-items: center;
                   justify-content: center;
                   gap: 20px;
+
+                  color: white;
                }
 
                .button-welcome {
@@ -182,6 +170,74 @@ $violet-hover:rgba(136, 123, 220, 0.5);
 
                   &:hover {
                      color: white;
+                  }
+               }
+
+               .text-link {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 20px;
+               }
+
+               @media screen and (max-width: 1025px) {
+                  img {
+                     height: 400px;
+                     width: 750px;
+                     border-radius: 40px;
+                  }
+
+                  h2 {
+                     position: absolute;
+                     top: 150px;
+   
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     justify-content: center;
+                     gap: 20px;
+
+                     font-size: 26px;
+                  }
+   
+                  .button-welcome {
+                     background-color: white;
+                     color: $violet;
+   
+                     &:hover {
+                        color: white;
+                     }
+                  }
+   
+                  .text-link {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                     gap: 20px;
+                  }
+               }
+   
+               @media screen and (max-width: 850px) {
+                  img {
+                     height: 350px;
+                     width: 650px;
+                     border-radius: 35px;
+                  }
+               }
+                  
+               @media screen and (max-width: 680px) {
+                  font-size: 15px;
+
+                  img {
+                     height: 350px;
+                     width: 100%;
+                     border-radius: 35px;
+                  }
+
+                  h2 {
+                     font-size: 17px;
                   }
                }
             }
@@ -307,7 +363,27 @@ $violet-hover:rgba(136, 123, 220, 0.5);
                      color: $violet;
                   }
                }
+   
+               @media screen and (max-width: 850px) {
+
+                  font-size: 15px;
+
+                  img {
+                     width: 100%;
+                  }
+
+                  div {
+                     top: 400px;
+                     left: 0%;
+                     text-align: center;
+                  }
+
+                  h2 {
+                     font-size: 17px;
+                  }
+               }
             }
+            
          }
       }
 

@@ -3,6 +3,7 @@ import { format, parseISO } from "date-fns"
 import ruLocale from 'date-fns/locale/ru'
 import axios from 'axios'
 import ContentLoader from 'react-content-loader'
+import { useNavigate } from "react-router";
 
 import Calendar from "../../components/calendar/Calendar";
 import TimetableCard from "../../components/timetableCard/TimetableCard";
@@ -13,6 +14,8 @@ const Timetable = ({setCurrentPage}) => {
    const [selectedDate, setSelectedDate] = React.useState(new Date())
    const [dayCourses, setDayCourses] = React.useState()
    const [loading, setLoading] = React.useState(true)
+
+   const navigate = useNavigate()
 
    React.useEffect(() => {
       window.scrollTo(0, 0)
@@ -26,6 +29,7 @@ const Timetable = ({setCurrentPage}) => {
          } catch(error) {
             console.log(error)
             alert('не удалось получить курсы')
+            navigate('/')
          } finally {
             setLoading(false)
          }
