@@ -11,8 +11,8 @@ const Footer = () => {
 
         <div className="footer__wrapper-link">
           <a className="icon-github icon" href="https://github.com/BURmister/studio"><img src={gitHub} alt="github"></img></a>
-          <a className="icon-vk icon" href="https://github.com/BURmister/studio"><img src={vk} alt="vk"></img></a>
-          <a className="icon-telegram icon" href="https://github.com/BURmister/studio"><img src={telegram} alt="telegram"></img></a>
+          <a className="icon-vk icon" href="https://vk.com"><img src={vk} alt="vk"></img></a>
+          <a className="icon-telegram icon" href="https://web.telegram.org"><img src={telegram} alt="telegram"></img></a>
         </div>
 
         <div className="footer__wrapper-copyright">

@@ -22,7 +22,7 @@ const Information = ({setCurrentPage}) => {
          <div className="information__wrapper-item">
             <img src={informationMain}/>
             <h2>
-               давай посмотрим расписание на сегодня!
+               ознакомимся<br/> с расписанием на сегодня?
                <Link to="/timetable" className="information-button button-welcome">посмотреть</Link>
             </h2>
 
@@ -78,3 +78,5 @@ const Information = ({setCurrentPage}) => {
 
 
 export default Information
+
+
